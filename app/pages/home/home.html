@@ -1,0 +1,38 @@
+<ion-navbar primary *navbar>
+  <ion-title>
+    PouchDB - Ionic 2
+  </ion-title>
+
+  <ion-buttons end>
+    <button class="btn" (click)="addData()"><ion-icon name="add"></ion-icon></button>
+    <button class="btn" (click)="refreshData()"><ion-icon name="refresh"></ion-icon></button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content class="home">
+  <ion-item class="topLine">
+    Nb éléments 
+    <ion-badge item-right>{{items.length}}</ion-badge>
+  </ion-item>
+  
+  <ion-item class="list">
+  <ion-card *ngFor="#item of items">
+    <ion-item>
+      <b>{{item.message}}</b>
+      <ion-icon darkIcon item-right name="create" (click)="openDetail(item)"></ion-icon>
+        <ion-icon darkIcon item-right name="trash" padding-left="5px" (click)="deleteData(item)"></ion-icon>
+    </ion-item>
+    <ion-card-content (click)="openDetail(item)">
+      _id : {{item._id}}
+    </ion-card-content>
+    
+  </ion-card>
+  </ion-item>
+  <!--
+  <ion-list>
+    <ion-item *ngFor="#item of items">
+        <ion-label (click)="openDetail(item)">{{item.message}}</ion-label>
+        <button class="btn" item-right (click)="deleteData(item)"><ion-icon name="trash"></ion-icon></button>
+    </ion-item>
+  </ion-list>-->
+</ion-content>

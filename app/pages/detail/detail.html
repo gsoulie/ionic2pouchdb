@@ -1,0 +1,26 @@
+<!--
+  Generated template for the DetailPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar primary *navbar>
+  <ion-title>
+    Détail {{item.message}}
+  </ion-title>
+
+  <ion-buttons end>
+    <button class="btn" (click)="validate()"><ion-icon name="checkmark"></ion-icon></button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content padding class="detail">
+    <ion-item>
+        <ion-label>id</ion-label>
+        <ion-input class="disable" type="text" readonly value="{{item._id}}"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Message</ion-label>
+        <ion-input [ngModel]="item.message" type="text" (change)="updateMessage($event.target.value)"></ion-input>
+    </ion-item>
+</ion-content>

@@ -1,0 +1,17 @@
+$page-background: #F4F4F7;
+
+.home {
+  background-color: $page-background;
+}
+.btn{
+  width: 50px;
+}
+.topLine {
+  background-color: $page-background;
+  position: fixed;
+  z-index: 100;
+}
+.list {
+  padding-top: 30px;
+  background-color: $page-background;
+}
