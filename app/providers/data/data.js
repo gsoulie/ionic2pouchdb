@@ -8,8 +8,8 @@ export class Data {
   constructor() {
 
     this.db = new PouchDB('mydb');
-    this.username = 'themoseedowstrinkessomms';
-    this.password = '94906322efab744839a0fa893f4c19f1a2087505';
+    this.username = 'your-username-key';
+    this.password = 'your-password-key';
     this.remote = 'https://507204ba-6c5b-4449-8387-4033f9e65e27-bluemix.cloudant.com/mydb/';
     //this.remote = 'https://gsoulie.cloudant.com/mydb/';
       
